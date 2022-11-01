@@ -14,8 +14,8 @@ app.use(express.static("dist"));
 const userRoutes = require("./server/routes/userRoutes.js");
 const levelRoutes = require("./server/routes/levelRoutes.js");
 const gameRoutes = require("./server/routes/gameRoutes.js");
-const gamesRoutes = require("./server/routes/gamesRouter");
-app.use("/", userRoutes, levelRoutes, gameRoutes);
+const gamesRoutes = require("./server/routes/gamesRouter.js");
+app.use("/", userRoutes, levelRoutes, gameRoutes, gamesRoutes);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/index.html"));
